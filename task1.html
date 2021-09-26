@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+background-color:pink;
+}
+.blue{
+background-image:url('baby1.jpg');
+background-repeat:no-repeat;
+background-size:100% 101%
+}
+.blue h1{
+color:bisque;
+text-align:center;
+font-size:50px;
+}
+.blue ul{
+list-style-type:none;
+}
+.blue li{
+float:left;
+}
+.blue li a{
+text-decoration:none;
+display:inline;
+margin-right:20px;
+color:white;
+text-align:center;
+font-size:25px;
+font-weight:bold;
+}
+.blue li a:hover{
+color:white;
+background-color:pink;
+}
+{box-sizing:border-box}
+
+.blue .slide {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+}
+
+.blue .picslide {
+display:none;
+}
+
+.blue .prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.blue .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.blue .prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.blue .text {
+  background-color:grey;
+  color: #f2f2f2;
+  font-size: 20px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/5 etc) */
+.blue .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.blue .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.blue .active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.blue .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 23%;
+  padding: 0 10px;
+  margin-left:10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: lightblue;
+  color:purple;
+  font-size:20px;
+  font-style:italic;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.prod .row .column .card {
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 350px;
+  max-height: 550px;
+  text-align: center;
+  font-family: arial;
+  margin-left:30px;
+}
+
+.prod .row .column .card h1{
+color:purple;
+}
+
+.prod .row .column .price {
+  color: white;
+  font-size: 22px;
+}
+
+.prod .row .column .card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: purple;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.prod .row .column .card button:hover {
+  background-color:white;
+  color:purple;
+}
+
+.contact .stwht{
+font-size:15px;
+color:black;
+text-align:center;
+font-weight:bold;
+}
+
+</style>
+</head>
+<body>
+<div class="blue" style="margin-top:10px;margin-left:30px;margin-right:30px;">
+<h1>Me n Moms'</h1>
+<ul>
+<li><a href="#slide" style="margin-left:390px;">Home</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#watchme">Watch Me</a></li>
+<li><a href="#offers">Offers</a></li>
+<li><a href="#contus">Contact Us</a></li>
+</ul>
+<br>
+<br><br>
+<div class="slide" id = "slide">
+
+  <div class="picslide">
+    <div class="numbertext">1 / 5</div>
+    <img src="baby3.jpg" style="width:100%">
+    <div class="text">Are you looking for place to satisfy needs of new borns and mothers? You are at the right place then!</div>
+  </div>
+
+  <div class="picslide">
+    <div class="numbertext">2 / 5</div>
+    <img src="baby2.jpg" style="width:100%">
+    <div class="text">We offer a wide range of products for all babies and their mommas!!</div>
+  </div>
+
+  <div class="picslide">
+    <div class="numbertext">3 / 5</div>
+    <img src="baby6.jpg" style="width:100%">
+    <div class="text">Babies, kids upto age of 6 can find all kinds of toys here!</div>
+  </div>
+
+<div class="picslide">
+    <div class="numbertext">4 / 5</div>
+    <img src="baby5.jpg" style="width:100%">
+    <div class="text">Moms, who care for their babies, can look onto the lotions, creams and also, cute clothes for their lil' ones!</div>
+  </div>
+
+<div class="picslide">
+    <div class="numbertext">5 / 5</div>
+    <img src="baby4.jpg" style="width:100%">
+    <div class="text">We come from the hometown of Chicago, wanting to offer all necessaries, especially for the new borns and their moms!!</div>
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+ <span class="dot" onclick="currentSlide(4)"></span>
+ <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+</div>
+<br><br>
+<div class="row">
+  <div class="column">
+    <div class="card" style="margin-left:60px;"><p>"A baby is something you carry inside you for nine months, in your arms for three years and in your heart till the day you die."</p></div>
+  </div>
+  <div class="column">
+    <div class="card"><p>"There are many things in life that I have taken for granted, but the opportunity and ability to be a mama will never be one of them."</p></div>
+  </div>
+  <div class="column">
+    <div class="card"><p>"The biggest surprise, which is also the best, is that I didn't know I would love motherhood as much as I do."</p></div>
+  </div>
+  <div class="column">
+    <div class="card"><p>"A mother's joy begins when new life is stirring inside; when a tiny heartbeat is heard for the first time, and a playful kick reminds her that she is never alone."</p></div>
+  </div>
+</div>
+<br>
+<br><br>
+<div class="prod" id="products">
+<h2 style="color:purple;font-weight:bold;text-align:center;">PRODUCTS</h2><br>
+<div class="row">
+  <div class="column">
+    <div class="card"><img src="prod1.jpg" alt="Essentials" style="width:100%">
+  <h2>Baby Essentials</h2>
+  <p class="price">Starts from Rs.300</p>
+  <p>It's bathing time!</p>
+  <p><button>Buy ME</button></p></div>
+  </div>
+  <div class="column">
+    <div class="card"><img src="prod2.jpg" alt="Clothing" style="width:100%">
+  <h2>Baby Clothing</h2>
+  <p class="price">Starts from Rs.250</p>
+  <p>I wanna wear somethin' cute</p>
+  <p><button>Buy ME</button></p></div>
+  </div>
+  <div class="column">
+    <div class="card"> <img src="prod3.jpg" alt="Healthcare" style="width:100%">
+  <h2>Products for Mothers</h2>
+  <p class="price">Starts from Rs.400</p>
+  <p>It's not for me, it's for my mom!</p>
+  <p><button>Buy ME</button></p></div>
+  </div>
+  <div class="column">
+    <div class="card"><img src="prod4.jpg" alt="Toys" style="width:100%">
+  <h2>Toys for children</h2>
+  <p class="price">Starts from Rs.150</p>
+  <p>It's play time!</p>
+  <p><button>Buy ME</button></p></div>
+  </div>
+</div>
+</div>
+<br><br>
+<hr style="height:3px;width:70%;border-width:2px;color:purple;background-color:lightblue">
+<br>
+<div class="me" id="watchme">
+<h3 style="background-color:lightblue;text-align:center;margin-left:35px;margin-right:35px;">Worried your babies may not like our products? Here are some cute sample videos, to ensure the quality and safety of the products!!!</h3>
+<video width="320" height="240" style="margin-left:49px;" controls>
+  <source src="movie1.mp4" type="video/mp4">
+</video>
+<video width="320" height="240" style="margin-left:36px;" controls>
+  <source src="movie2.mp4" type="video/mp4">
+</video>
+<video width="320" height="240" style="margin-left:36px;" controls>
+  <source src="movie3.mp4" type="video/mp4">
+</video>
+<video width="320" height="240" style="margin-left:36px;" controls>
+  <source src="movie4.mp4" type="video/mp4">
+</video>
+<video width="320" height="240" style="margin-left:49px;" controls>
+  <source src="movie5.mp4" type="video/mp4">
+</video>
+<video width="320" height="240" style="margin-left:36px;" controls>
+  <source src="movie6.mp4" type="video/mp4">
+</video>
+<video width="320" height="240" style="margin-left:36px;" controls>
+  <source src="movie7.mp4" type="video/mp4">
+</video>
+<video width="320" height="240" style="margin-left:36px;" controls>
+  <source src="movie8.mp4" type="video/mp4">
+</video>
+</div>
+<br><br><br>
+<div class="offers" id="offers" style="background-color:darkviolet;margin-left:300px;margin-right:300px;padding-top:20px;padding-bottom:60px;">
+<h1 style="color:white;text-align:center;">Hurry! Sign Up to avail Offers!!!</h1><br><br>
+<form>
+<label for="name" style="font-size:20px;font-weight:bold;color:white;padding-left:330px;">Name : </label>
+<input type="text" value="" name="name"><br><br>
+<label for="emailid" style="font-size:20px;font-weight:bold;color:white;padding-left:330px;">Email Id : </label>
+<input type="text" value="" name="emailid"><br><br>
+<input type="submit" value="Submit" name="Submit" style="background-color:purple;color:white;font-size:15px;margin-left:430px;">
+</form>
+</div><br>
+<div class="contact" id="contus" style="background-color:lightblue;margin-left:35px;margin-right:35px;padding-top:10px;padding-bottom:10px;">
+<h2 style="color:black;text-align:center;">Contact Us</h2>
+<p class="stwht">Tel no. : 22913677 / 78 / 79 / 80</p>
+<p class="stwht">Mail us @ menmomsdotco@gmail.com</p>
+<p class="stwht">Official Website : www.menmoms.com</p>
+<p class="stwht">Stores available in Bangalore, Mumbai, Chennai, Hyderabad</p>
+</div><br>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("picslide");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>
